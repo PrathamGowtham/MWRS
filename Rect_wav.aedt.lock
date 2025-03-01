@@ -1,0 +1,42 @@
+$begin 'ConnectionParameters'
+	DesktopProcessID=8352
+	DesktopProcessPath='F:\\Ansys Student\\v242\\Win64\\ansysedtsv.exe'
+	LaunchedByWB=false
+	GRPCPort=50051
+	$begin 'DesktopStubBlock'
+		$begin 'CommDetails'
+			TransportType=1
+			IPAddress='172.28.0.1'
+			ListenPort='50297'
+			IPAddressVector[4: '192.168.201.1', '192.168.146.1', '192.168.56.1', '192.168.1.5']
+		$end 'CommDetails'
+		$begin 'Marshall'
+			InstanceID=503
+			ProcID=8352
+			InterfaceID=1
+			FactoryIntID='DesktopInterfaceForWBProxyStubFactory'
+		$end 'Marshall'
+	$end 'DesktopStubBlock'
+	$begin 'DesktopBackgroundObjStubBlock'
+		$begin 'CommDetails'
+			TransportType=1
+			IPAddress='172.28.0.1'
+			ListenPort='50297'
+			IPAddressVector[4: '192.168.201.1', '192.168.146.1', '192.168.56.1', '192.168.1.5']
+		$end 'CommDetails'
+		$begin 'Marshall'
+			InstanceID=505
+			ProcID=8352
+			InterfaceID=2
+			FactoryIntID='DesktopInterfaceForWBProxyStubFactory'
+		$end 'Marshall'
+	$end 'DesktopBackgroundObjStubBlock'
+	$begin 'WebClientBlock'
+		Url='http://BreakJunkies:30660/?server=ws://BreakJunkies:30148&token=33f8efcf-8bd6-bc25-6b9e-9a92017e9b64&startTab=monitor/graph'
+		SecureUrl='https://BreakJunkies:30916/?server=wss://BreakJunkies:30404&token=33f8efcf-8bd6-bc25-6b9e-9a92017e9b64&startTab=monitor/graph'
+		WsHost='BreakJunkies'
+		WsPort=30148
+		WssPort=30404
+		Token='33f8efcf-8bd6-bc25-6b9e-9a92017e9b64'
+	$end 'WebClientBlock'
+$end 'ConnectionParameters'
