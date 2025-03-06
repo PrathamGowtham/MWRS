@@ -28,24 +28,6 @@ title('rayleigh PDF');
 xlabel('random variable'); 
 ylabel('probability'); 
 legend('variance =1') 
-%BPSK simulation 
-Pe_BPSK_id=0.5*(1-sqrt((var*SNR)./(1+var*SNR))); 
-%BFSK simulation (coharent) 
-BFSK_id = 0.5*(1-sqrt(var*SNR./(2+(var*SNR))));  
-%DPSK simulation 
-Pe_DPSK_id=0.5./(1+var*SNR);
-
-%Comparison of Error performance for AWGN and rayleigh fading channels 
-Pe_BPSK_NF=0.5*(erfc(sqrt(SNR))); 
-Pe_BFSK_NF=0.5*(erfc(sqrt(SNR/2))); 
-Pe_DPSK_NF=0.5*exp(-SNR); %non-coharent 
-figure(3); 
-semilogy(SNR_db,Pe_BPSK_id,'r.-', SNR_db,BFSK_id,'r*-',SNR_db,Pe_DPSK_id,'r--', SNR_db,Pe_BPSK_NF,'b.-',SNR_db,Pe_BFSK_NF,'b*-',SNR_db,Pe_DPSK_NF,'b--'); 
-axis([-5 SNR_limit 0.000001 1]); 
-title('performance of BPSK,BFSK,DPSK') 
-xlabel('SNR(db)'); 
-ylabel('probability of error'); 
-legend('Pe of BPSK with fading','Pe of BFSK with fading','Pe of DPSK with fading','Pe of BPSK without fading','Pe of BFSK without fading','Pe of DPSK without fading'); 
 
 %BPSK simulation 
 Pe_BPSK_id=0.5*(1-sqrt((var*SNR)./(1+var*SNR))); 
